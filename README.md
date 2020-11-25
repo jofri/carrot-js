@@ -57,12 +57,15 @@ The 'pick' method will get your variable and start listening for any changes to 
  Every time the variables changes, 'pick' will execute your callback function. The component below will print 'Crops are good this year!':
 
 ```bash
+import { useEffect, useState } from 'react';
 import { pick } from 'carrot-js';
 
 function MyComponent () {
   const [variable, setVariable] = useState('');
 
-  pick('exampleVariable', setVariable);
+  useEffect( () => {
+    pick('exampleVariable', setVariable);
+  }, []);
 
   return (
     <>
