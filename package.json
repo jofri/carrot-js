@@ -1,0 +1,26 @@
+{
+  "name": "carrot-js",
+  "version": "1.0.0",
+  "description": "Redux without the boilerplate - Store, retrieve and update variables in real-time from any React file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "node postinstall.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jofri/carrot-js.git"
+  },
+  "author": "jofri",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jofri/carrot-js/issues"
+  },
+  "homepage": "https://github.com/jofri/carrot-js#readme",
+  "peerDependencies": {
+    "react": "^16.3.0"
+  },
+  "dependencies": {
+    "rxjs": "^6.6.3"
+  }
+}
