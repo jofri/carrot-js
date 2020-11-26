@@ -14,7 +14,8 @@ const Carrot = pantry.Provider;
 const plant = (variable, data) => {
   try {
     if (!pantry[variable]) {
-      pantry[variable]['temp'] = data; // If no listners, store new temp variable
+      pantry['temp'] = {};
+      pantry['temp'][variable] = data; // If no listeners, store new temp variable
       pantry[variable] = new Subject(); // Store new observable in pantry
     }
     pantry[variable].next(data); // Set new data
@@ -27,9 +28,9 @@ const plant = (variable, data) => {
 const pick = (variable, cb) => {
   try {
     // If variable already exists, execute CB once and delete temp value
-    if (pantry[variable]['temp']) {
-      cb(pantry[variable]['temp']);
-      delete pantry[variable]['temp'];
+    if (pantry[variable] && pantry['temp'][variable]) {
+      cb(pantry['temp'][variable]);
+      delete pantry['temp'][variable];
     }
     if (!pantry[variable]) pantry[variable] = new Subject();
     pantry[variable].subscribe({ // Subscribe to observable

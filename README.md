@@ -54,7 +54,7 @@ The 'pick' method will get your variable and start listening for any changes to 
  - Variable name
  - Callback function (eg. setVariable, myFunction, (data) => { console.log(data) } etc.)
 
- Every time the variables changes, 'pick' will execute your callback function. The component below will print 'Crops are good this year!':
+ Every time the variable changes, 'pick' will execute your callback function. The component below will print 'Crops are good this year!':
 
 ```bash
 import { useEffect, useState } from 'react';
