@@ -1,6 +1,6 @@
 {
   "name": "carrot-js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Redux without the boilerplate - Store, retrieve and update variables in real-time from any React file",
   "main": "index.js",
   "scripts": {
